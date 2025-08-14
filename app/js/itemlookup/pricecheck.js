@@ -521,7 +521,7 @@ function executeSearch(requestBody,callback)
 {
     QS('#show-in-aggregator').setAttribute('slug',null);
     callback = callback || displayResults;
-    fetch(`https://www.pathofexile.com/api/trade/search/${selectedLeague}`, {
+    fetch(`https://www.pathofexile.com/api/trade2/search/poe2/${selectedLeague}`, {
         method: 'POST',
         headers: 
         {
@@ -566,7 +566,7 @@ function displayResults(data)
         {
             cheapest.push(result[i]);
         }
-        fetch(`https://www.pathofexile.com/api/trade/fetch/${cheapest}?query=${data.id}`, {
+        fetch(`https://www.pathofexile.com/api/trade2/fetch/${cheapest}?query=${data.id}`, {
         method: 'GET',
         headers: 
         {

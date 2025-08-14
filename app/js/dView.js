@@ -266,7 +266,7 @@ function dView(result, searchInfo)
 		var searchLink = document.createElement('span');
 		searchLink.classList.add('link');
 		searchLink.appendChild(document.createTextNode(searchInfo.searchUrlPart));
-		searchLink.url = 'https://www.pathofexile.com/trade/search/' + league + '/' + searchInfo.searchUrlPart;
+           searchLink.url = 'https://www.pathofexile.com/trade2/search/poe2/' + league + '/' + searchInfo.searchUrlPart;
 		searchLink.addEventListener('click', (e)=> {loadOfficialTradeWebsite(e.target.url);});
 		overrides['searchinfo'] = searchLink;
 
@@ -575,7 +575,7 @@ function dView(result, searchInfo)
 	refreshButton.onclick = function ()
 	{
 		this.searchInfo.refreshTarget = this.refreshTarget;
-		var itemUrl = 'https://www.pathofexile.com/api/trade/fetch/' + this.gggid;
+               var itemUrl = 'https://www.pathofexile.com/api/trade2/fetch/' + this.gggid;
 		itemUrl += '?query=' + this.searchInfo.searchUrlPart;
 		
 		callAjax(itemUrl, refreshItem, this.searchInfo);

@@ -62,7 +62,7 @@ function ItemFetcher()
 			{
 				document.getElementById('display-window-button').classList.add('new');
 			}
-			var getItemUrl = 'https://www.pathofexile.com/api/trade/fetch/';	
+                       var getItemUrl = 'https://www.pathofexile.com/api/trade2/fetch/';
 			var url = getItemUrl + itemRequest.listings;
 			url += '?query=' + itemRequest.searchInfo.searchUrlPart;
 			

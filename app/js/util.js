@@ -83,7 +83,7 @@ function sendClipboardTextToPoe() { utilIpc.send('run-main-command','send-clipbo
 function newPoeSearch(slug) {
 	slug = slug == null ? '' : `${selectedLeague}/${slug}`;
 	utilIpc.send('show-main-window');
-	callMainWindowFunction(`loadOfficialTradeWebsite(\'https://www.pathofexile.com/trade/search/${slug}\');`);
+       callMainWindowFunction(`loadOfficialTradeWebsite(\'https://www.pathofexile.com/trade2/search/poe2/${slug}\');`);
 }
 
 const log = (msg) => console.log(msg);

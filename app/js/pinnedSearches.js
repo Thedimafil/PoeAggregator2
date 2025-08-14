@@ -185,7 +185,7 @@ function addSearchToCategory (search,category) {
         if(runInPoeButton.classList.contains('disabled')) return;
         disableRunButtons(500);
         let league = document.getElementById('league').value;
-		let url = 'https://www.pathofexile.com/trade/search/' + league + '/' + search.searchUrlPart;
+               let url = 'https://www.pathofexile.com/trade2/search/poe2/' + league + '/' + search.searchUrlPart;
 		loadOfficialTradeWebsite(url);
      };
      let runInNewWindowButton = row.querySelector('.run-in-new-window-button');

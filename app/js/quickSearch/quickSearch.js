@@ -19,7 +19,7 @@ quickSearchIpc.on('quick-search', (event,searchInfoString) => {
 function executeQuickSearch(searchInfo)
 {
     QS('.error-msg').innerHTML = '';
-    fetch(`https://www.pathofexile.com/api/trade/search/${searchInfo.searchUrlPart}?q=`, {
+    fetch(`https://www.pathofexile.com/api/trade2/search/poe2/${searchInfo.searchUrlPart}?q=`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     })
@@ -37,7 +37,7 @@ function executeSearch(filterCriteria,searchInfo)
 
 function getItemIds(requestBody,callback, searchInfo)
 {
-    fetch(`https://www.pathofexile.com/api/trade/search/${selectedLeague}`, {
+    fetch(`https://www.pathofexile.com/api/trade2/search/poe2/${selectedLeague}`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json' },
         body: JSON.stringify(requestBody),
@@ -78,7 +78,7 @@ function lookUpNextTenItems(requests,searchInfo)
 {
     if(requests.length == 0) return;
     let itemIds = requests.shift();
-    fetch(`https://www.pathofexile.com/api/trade/fetch/${itemIds}`, {
+    fetch(`https://www.pathofexile.com/api/trade2/fetch/${itemIds}`, {
         method: 'GET',
         headers: {'Content-Type': 'application/json' }
     })

@@ -2,7 +2,7 @@ var initialized = false;
 function loadPoeWebsite()
 {	
 	currentWindow = document.getElementById('poe-search-window');
-	var url = !initialized ? 'https://www.pathofexile.com/trade/search' : null;
+       var url = !initialized ? 'https://www.pathofexile.com/trade2/search/poe2' : null;
 	loadOfficialTradeWebsite(url);	
 }
 

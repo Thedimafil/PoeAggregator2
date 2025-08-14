@@ -8,7 +8,7 @@ let searchFilterTypes = Array('pseudo','explicit','implicit','fractured','enchan
 function loadSearchFilters()
 {
 	let host = 'www.pathofexile.com';
-	let path = 'https://www.pathofexile.com/api/trade/data/stats';
+    let path = 'https://www.pathofexile.com/api/trade2/data/stats';
 	
 	let myHeaders = 
     {        
