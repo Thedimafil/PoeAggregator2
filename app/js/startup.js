@@ -4,7 +4,7 @@ var searchConnectionManager = null;
 
 document.addEventListener('poeAggTemplateComplete', () => {
 	populateSounds();
-	callAjax('https://api.pathofexile.com/leagues', init);
+       callAjax('https://www.pathofexile.com/api/trade2/data/leagues', init);
 });
 
 var init = function(data, parameters)

@@ -71,14 +71,14 @@ async function createWindow() {
 	}
 
 	session.defaultSession.webRequest.onBeforeSendHeaders(filter, (details, callback) => {
-		if (details.url.startsWith('https://www.pathofexile.com/api/trade/fetch/')) details.requestHeaders['cookie'] = '';
+               if (details.url.startsWith('https://www.pathofexile.com/api/trade2/fetch/')) details.requestHeaders['cookie'] = '';
 		else details.requestHeaders['cookie'] = 'POESESSID=' + getPoesessionid();
 		callback({ requestHeaders: details.requestHeaders })
 	})
 
 	session.defaultSession.webRequest.onResponseStarted(filter, (details) => {
-		if (details.referrer) {
-			var url = details.referrer.replace('https://www.pathofexile.com/trade/search/', '');
+               if (details.referrer) {
+                       var url = details.referrer.replace('https://www.pathofexile.com/trade2/search/poe2/', '');
 			var parts = url.split('/');
 			if (parts.length == 2) {
 				var league = parts[0];

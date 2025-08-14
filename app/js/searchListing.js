@@ -203,7 +203,7 @@ function openTradeWebsite(element) {
 	var urlBox = parent.querySelector('.search-url');
 	if(urlBox.value != null && urlBox.value.trim().length > 0) {
 		var league = document.getElementById('league').value;
-		var url = 'https://www.pathofexile.com/trade/search/' + league + '/' + urlBox.value;
+           var url = 'https://www.pathofexile.com/trade2/search/poe2/' + league + '/' + urlBox.value;
 		loadOfficialTradeWebsite(url);
 	}	
 }

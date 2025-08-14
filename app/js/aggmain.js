@@ -205,7 +205,7 @@ function startSockets()
 			loadCurrency();
 		}
 		var league = document.getElementById('league').value;
-		var socketPath = "wss://pathofexile.com:443/api/trade/live/";
+           var socketPath = "wss://pathofexile.com:443/api/trade2/live/poe2/";
 		
 		var socketUrl = socketPath + league + '/';
 		var searchesString = document.getElementById('searches').value;
@@ -667,7 +667,7 @@ function runSortedSearch(searchInfo, sort, callback) {
 	if(!ItemFetchManager.isRateLimited())
 	{
 		searchInfo.orgin = 'run';
-		var url = `/api/trade/search/${searchInfo.searchUrlPart}?q=`;
+           var url = `/api/trade2/search/poe2/${searchInfo.searchUrlPart}?q=`;
 
 		var sortsearches = function(data, info, uponcomplete, mySort)
 		{
@@ -680,8 +680,8 @@ function runSortedSearch(searchInfo, sort, callback) {
 			}
 			requestBody = JSON.stringify(requestBody);
 			var league = document.getElementById('league').value;
-			var path = '/api/trade/search/';
-			path += league;
+                   var path = '/api/trade2/search/poe2/';
+                   path += league;
 			callAjaxWithSession('POST', path, uponcomplete, requestBody, info);
 		};
 
