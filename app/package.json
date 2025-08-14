@@ -6,13 +6,15 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "rebuild": "npx @electron/rebuild"
   },
   "author": "cpieprzak",
   "license": "ISC",
   "devDependencies": {
     "electron": "^13.1.6",
-    "electron-builder": "22.10.5"
+    "electron-builder": "22.10.5",
+    "@electron/rebuild": "^4.0.1"
   },
   "build": {
     "appId": "poe-aggregator"
